@@ -11,7 +11,7 @@ const OnlineBookingSchema = new mongoose.Schema({
     // appointment information
     preferredDate: { type: Date, required: false },
     preferredTime: { type: String, required: false },
-    preferredDoctor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false },
+    preferredDoctor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
     notes: { type: String, required: false },
     isFirstVisit: { type: Boolean, default: true },
     visitType: {

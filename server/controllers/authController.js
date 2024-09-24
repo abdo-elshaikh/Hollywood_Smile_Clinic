@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const jwt = require('jsonwebtoken');
 const { sendMail } = require('../utils/mailService');
+const { sendSms } = require('../utils/smsService');
 const generateAuthToken = require('../utils/generateAuthToken');
 require('dotenv').config();
 
@@ -61,6 +62,8 @@ const login = async (req, res) => {
         }
 
         const token = generateAuthToken(user._id);
+        // send sms
+        // await sendSms();
         res.status(200).json({ user, token, message: 'Login successful' });
 
     } catch (error) {
@@ -112,7 +115,7 @@ const activate = async (req, res) => {
 
 // Change password
 const changePassword = async (req, res) => {
-    const userId = req.user._id;
+    const userId = req.params.id;
     const { oldPassword, newPassword } = req.body;
     try {
         const user = await User.findById(userId);
@@ -161,7 +164,7 @@ const forgotPassword = async (req, res) => {
         };
 
         await sendMail(mailOptions);
-        res.status(200).json({ message: 'Password reset email sent successfully, please check your email' });
+        res.status(200).json({ token, message: 'Password reset email sent successfully, please check your email' });
     } catch (error) {
         console.error('Forgot password error:', error);
         res.status(500).json({ message: error.message });

@@ -33,29 +33,8 @@ const userSchema = new mongoose.Schema({
     address: { type: String, required: false },
     description: { type: String, required: false },
     avatar: { type: String, required: false, default: '' },
-    role: {
-        type: String,
-        enum: [
-            'doctor',          // Medical professionals who diagnose and treat patients
-            'nurse',           // Nurses assisting doctors and taking care of patients
-            'receptionist',    // Manages appointments and front-desk responsibilities
-            'patient',         // People receiving medical care
-            'admin',           // Administrative staff handling operational aspects
-            'manager',         // Clinic manager overseeing operations
-            'accountant',      // Manages the clinic’s finances and billing
-            'hr',              // Human Resources managing staff recruitment and employee relations
-            'lab_technician',  // Lab staff performing diagnostic tests
-            'pharmacist',      // Manages medications and prescriptions
-            'dentist',         // Specialized in dental care and treatments
-            'orthodontist',    // Specialized in correcting teeth and jaw alignment
-            'hygienist',       // Dental hygienist assisting with teeth cleaning and oral health
-            'radiologist',     // Handles imaging techniques like X-rays, MRI, etc.
-            'other',           // Any other non-specific role
-        ],
-        default: 'patient',  // Default to patient for unassigned roles
-        required: true,
-    },
-    status: {type: Boolean, default: true},
+    role: { type: String, required: true, default: 'patient' },
+    active: { type: Boolean, default: true },
     isVerified: { type: Boolean, default: false },
 }, {
     timestamps: true, // Automatically adds createdAt and updatedAt fields

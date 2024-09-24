@@ -1,74 +1,123 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const PatientSchema = new mongoose.Schema({
+// Subschema for Address
+const AddressSchema = new Schema({
+    street: { type: String, trim: true },
+    city: { type: String, trim: true },
+    state: { type: String, trim: true },
+    zipCode: { type: String, trim: true }
+});
+
+// Subschema for Emergency Contact
+const EmergencyContactSchema = new Schema({
+    name: { type: String, trim: true },
+    relationship: { type: String, trim: true },
+    phone: { type: String, trim: true }
+});
+
+// Subschema for Medical History
+const MedicalHistorySchema = new Schema({
+    allergies: { type: String, trim: true },
+    medications: { type: String, trim: true },
+    familyHistory: { type: String, trim: true },
+    pastProcedures: { type: String, trim: true },
+    other: { type: String, trim: true }
+});
+
+// Subschema for Vital Signs
+const VitalSignsSchema = new Schema({
+    bloodPressure: { type: String, trim: true },
+    weight: { type: String, trim: true },
+    height: { type: String, trim: true },
+    bloodSugar: { type: String, trim: true },
+    temperature: { type: String, trim: true },
+    other: { type: String, trim: true }
+});
+
+// Subschema for Attachments
+const AttachmentSchema = new Schema({
+    fileUrl: { type: String, required: true },
+    type: { type: String, trim: true },
+    description: { type: String, trim: true },
+    uploadDate: { type: Date, default: Date.now }
+});
+
+// Main Patient Schema
+const PatientSchema = new Schema({
     // Personal Information
-    code: { type: String, required: true, unique: true },
-    name: { type: String, required: true },
-    email: { type: String, required: true, unique: true },
-    phone: { type: String, required: true },
-    whatsapp: { type: String, required: false },
+    patientCode: { type: Number, required: true, unique: true, description: 'Code of the patient', index: true },
+    name: { type: String, required: true, trim: true },
+    email: { type: String, required: true, unique: true, trim: true, lowercase: true, index: true },
+    phone: { type: String, required: true, trim: true, index: true },
+    whatsapp: { type: String, trim: true },
     dateOfBirth: { type: Date, required: true },
-    age: { type: Number, required: true },
-    gender: { type: String, enum: ['Male', 'Female', 'Other'], required: true },
+    age: { type: Number, required: true, min: 0 },
+    gender: { type: String, enum: ['male', 'female'], required: true },
+    avatar: { type: String },
 
     // Address
-    address: {
-        street: { type: String, required: false },
-        city: { type: String, required: false },
-        state: { type: String, required: false },
-        zipCode: { type: String, required: false }
+    address: AddressSchema,
+
+    // Patient Status
+    status: {
+        type: String,
+        enum: ['newPatient', 'followUp', 'regular', 'completed'],
+        default: 'newPatient',
+        index: true
     },
 
     // Emergency Contact
-    emergencyContact: {
-        name: { type: String, required: false },
-        relationship: { type: String, required: false },
-        phone: { type: String, required: false },
-    },
+    emergencyContact: EmergencyContactSchema,
 
     // Medical History
-    medicalHistory: {
-        allergies: { type: String, required: false },
-        medications: { type: String, required: false },
-        familyHistory: { type: String, required: false },
-        pastProcedures: { type: String, required: false },
-        other: { type: String, required: false }
-    },
+    medicalHistory: MedicalHistorySchema,
 
     // Vital Signs
-    vitalSigns: {
-        bloodPressure: { type: String, required: false },
-        weight: { type: String, required: false },
-        height: { type: String, required: false },
-        bloodSugar: { type: String, required: false },
-        temperature: { type: String, required: false },
-        other: { type: String, required: false }
+    vitalSigns: VitalSignsSchema,
+
+    // Attachments (like medical documents or reports)
+    attachments: [AttachmentSchema],
+
+    // Treatment Plan (reference to TreatmentPlan model)
+    treatmentPlan: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'TreatmentPlan'
     },
 
-    // Appointment Preferences
-    appointmentPreferences: {
-        preferredDoctor: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false },  // Preferred doctor
-        preferredTimes: { type: String, required: false },  // Preferred time for appointments (e.g., mornings, afternoons)
-        preferredDays: { type: String, required: false }    // Preferred days (e.g., weekdays, weekends)
+    // Appointments and Visits (reference to Appointment model)
+    appointments: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Appointment'
+    }],
+
+    // Prescriptions (reference to Prescription model)
+    prescriptions: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Prescription'
+    }],
+
+    // Billing Information (reference to Billing model)
+    billing: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Billing'
     },
-
-    // Attachments
-    attachments: [
-        {
-            fileUrl: { type: String, required: false },     // URL to attached files (e.g., scans, documents)
-            description: { type: String, required: false }, // Description of the attachment
-            uploadDate: { type: Date, default: Date.now }   // Date the file was uploaded
-        }
-    ],
-
-    // Image (Profile Picture)
-    image: { type: String, required: false, default: '' },
 
     // References to the User who created the patient record
-    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
+    createdBy: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }
 
 }, {
-    timestamps: true,
+    timestamps: true // Automatically adds createdAt and updatedAt timestamps
+});
+
+// Adding indexes for performance optimization
+PatientSchema.index({ email: 1, phone: 1 });
+
+// Adding custom validation or hooks (optional)
+PatientSchema.pre('save', function (next) {
+    // Custom logic before saving (like age validation based on dateOfBirth)
+    this.age = new Date().getFullYear() - this.dateOfBirth.getFullYear();
+    next();
 });
 
 const Patient = mongoose.model('Patient', PatientSchema);

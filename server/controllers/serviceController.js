@@ -19,7 +19,7 @@ const createService = async (req, res) => {
 
 const getAllServices = async (req, res) => {
     try {
-        const services = await Service.find();
+        const services = await Service.find().populate('department');
         if (services) {
             res.status(200).json(services);
         } else {
@@ -34,7 +34,7 @@ const getAllServices = async (req, res) => {
 const getServiceById = async (req, res) => {
     const id = req.params.id;
     try {
-        const service = await Service.findById(id);
+        const service = await Service.findById(id).populate('department');
         if (service) {
             res.status(200).json(service);
         } else {
@@ -60,7 +60,6 @@ const updateService = async (req, res) => {
         res.status(500).json({ message: error.message });
     }
 };
-
 
 const deleteService = async (req, res) => {
     const id = req.params.id;

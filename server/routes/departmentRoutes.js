@@ -1,13 +1,14 @@
 const express = require('express');
 const { getAllDepartments, getDepartmentById, createDepartment, updateDepartment, deleteDepartment } = require('../controllers/departmentController');
 const { isAuthenticated } = require('../middleware/authMiddleware');
+const { roleMiddleware } = require('../middleware/roleMiddleware');
 const router = express.Router();
 
-router.get('/', isAuthenticated, getAllDepartments); // get all departments
-router.get('/:id', isAuthenticated, getDepartmentById); // get department by id
-router.post('/', isAuthenticated, createDepartment); // create department
-router.put('/:id', isAuthenticated, updateDepartment); // update department
-router.delete('/:id', isAuthenticated, deleteDepartment); // delete department
+router.get('/', isAuthenticated, roleMiddleware('getDepartments'), getAllDepartments); // get all departments
+router.get('/:id', isAuthenticated, roleMiddleware('getDepartmentById'), getDepartmentById); // get department by id
+router.post('/', isAuthenticated, roleMiddleware('createDepartment'), createDepartment); // create department
+router.put('/:id', isAuthenticated, roleMiddleware('updateDepartment'), updateDepartment); // update department
+router.delete('/:id', isAuthenticated, roleMiddleware('deleteDepartment'), deleteDepartment); // delete department
 
 // handle errors
 router.use((err, req, res, next) => {

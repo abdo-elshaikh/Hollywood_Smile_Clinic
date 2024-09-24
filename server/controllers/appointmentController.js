@@ -6,20 +6,25 @@ const getAllAppointments = async (req, res) => {
             .populate('patient')
             .populate('department')
             .populate('service')
+            .populate('createdBy')
             .populate('doctor')
-            .populate('createdBy');
+            .$where('this.doctor && this.doctor.role == "doctor"');
         if (appointments) {
             res.status(200).json(appointments);
         } else {
             res.status(204).json({ message: 'No appointments found' });
         }
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        if (error.name === 'CastError') {
+            res.status(400).json({ message: 'Invalid ObjectId' });
+        } else {
+            res.status(500).json({ message: error.message });
+        }
     }
 };
 
 const getAppointmentByPatient = async (req, res) => {
-    const patientId = req.params.patientId;
+    const patientId = req.params.id;
     try {
         const appointments = await Appointment.find({ patient: patientId })
             .populate('patient')
@@ -38,7 +43,7 @@ const getAppointmentByPatient = async (req, res) => {
 };
 
 const getAppointmentByDoctor = async (req, res) => {
-    const doctorId = req.params.doctorId;
+    const doctorId = req.params.id;
     try {
         const appointments = await Appointment.find({ doctor: doctorId })
             .populate('patient')
@@ -57,7 +62,7 @@ const getAppointmentByDoctor = async (req, res) => {
 };
 
 const getAppointmentByDepartment = async (req, res) => {
-    const departmentId = req.params.departmentId;
+    const departmentId = req.params.id;
     try {
         const appointments = await Appointment.find({ department: departmentId })
             .populate('patient')

@@ -2,7 +2,7 @@ const User = require('../models/User');
 
 const getAllUsers = async (req, res) => {
     try {
-        const users = await User.find();
+        const users = await User.find().select('-password');
         if (!users) {
             return res.status(404).json({ message: 'No users found' });
         }
@@ -33,7 +33,7 @@ const updateProfile = async (req, res) => {
     const id = req.params.id;
     const user = req.body;
     try {
-        const updatedUser = await User.findByIdAndUpdate(id, user, { new: true });
+        const updatedUser = await User.findByIdAndUpdate(id, user, { new: true }).select('-password');
         if (!updatedUser) {
             return res.status(404).json({ message: 'User not found' });
         }
@@ -61,7 +61,7 @@ const deleteUser = async (req, res) => {
 const getUserByEmail = async (req, res) => {
     const email = req.params.email;
     try {
-        const user = await User.findOne({ email });
+        const user = await User.findOne({ email }).select('-password');
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
@@ -75,7 +75,7 @@ const getUserByEmail = async (req, res) => {
 const changeStatus = async (req, res) => {
     const id = req.params.id;
     try {
-        const user = await User.findById(id);
+        const user = await User.findById(id).select('-password');
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
@@ -92,7 +92,7 @@ const changeRole = async (req, res) => {
     const id = req.params.id;
     const { role } = req.body;
     try {
-        const user = await User.findById(id);
+        const user = await User.findById(id).select('-password');
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }

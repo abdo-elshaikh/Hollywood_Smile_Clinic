@@ -1,4 +1,5 @@
 const Department = require('../models/Department');
+const Service = require('../models/Service');
 
 
 const getAllDepartments = async (req, res) => {
@@ -55,16 +56,23 @@ const updateDepartment = async (req, res) => {
 const deleteDepartment = async (req, res) => {
     const id = req.params.id;
     try {
-        const deletedDepartment = await Department.findByIdAndDelete(id);
-        if (deletedDepartment) {
-            res.status(200).json(deletedDepartment);
+        // check if service have departments
+        const services = await Service.find({ department: id });
+        if (services.length > 0) {
+            res.status(400).json({ message: "Department has services. Cannot delete." });
         } else {
-            res.status(204).json({ message: "No department found" });
+            const deletedDepartment = await Department.findByIdAndDelete(id);
+            if (deletedDepartment) {
+                res.status(200).json(deletedDepartment);
+            } else {
+                res.status(204).json({ message: "No department found" });
+            }
         }
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
 };
+
 
 // export all functions
 module.exports = {

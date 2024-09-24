@@ -10,6 +10,11 @@ const serviceRoutes = require("./routes/serviceRoutes");
 const contactRoutes = require("./routes/contactRoutes");
 const appointmentRoutes = require("./routes/appointmentRoutes");
 const patientRoutes = require("./routes/patientRoutes");
+const treatmentRoutes = require("./routes/treatmentRoutes");
+const treatmentPlanRoutes = require("./routes/treatmentPlanRoutes");
+const billingRoutes = require("./routes/billingRoutes");
+
+const {initializeAdmin, initializeAdminPermissions} = require("./middleware/authMiddleware");
 
 
 // set up dotenv
@@ -20,6 +25,10 @@ const connectDB = require("./config/db");
 
 // connect to database
 connectDB();
+
+// initialize admin
+initializeAdmin();
+initializeAdminPermissions();
 
 // set up express
 const app = express();
@@ -46,6 +55,9 @@ app.use("/api/service", serviceRoutes);
 app.use("/api/appointment", appointmentRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/patient", patientRoutes);
+app.use("/api/treatment", treatmentRoutes);
+app.use("/api/treatmentplan", treatmentPlanRoutes);
+app.use("/api/billing", billingRoutes);
 
 // set up server port
 const port = process.env.PORT || 5000;

@@ -16,7 +16,7 @@ const getAllOnlineBooking = async (req, res) => {
 const getOnlineBookingById = async (req, res) => {
     const id = req.params.id;
     try {
-        const onlineBooking = await OnlineBooking.findById(id);
+        const onlineBooking = await OnlineBooking.findById(id).populate('doctor');
         if (onlineBooking) {
             res.status(200).json(onlineBooking);
         } else {
