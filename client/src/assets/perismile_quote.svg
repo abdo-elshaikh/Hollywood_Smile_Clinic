@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="125" viewBox="0 0 140 125">
+  <g id="Quote" transform="translate(-317 -5144)">
+    <rect id="Rectangle_193" data-name="Rectangle 193" width="140" height="125" transform="translate(317 5144)" fill="#fff"/>
+    <g id="quote-2" data-name="quote" transform="translate(330 5127.765)">
+      <path id="Path_445" data-name="Path 445" d="M233.882,29.235V78.269h32.689a32.727,32.727,0,0,1-32.689,32.689V127.3a49.088,49.088,0,0,0,49.034-49.034V29.235Z" transform="translate(-168.503)" fill="#e8d9b1"/>
+      <path id="Path_446" data-name="Path 446" d="M0,78.269H32.689A32.727,32.727,0,0,1,0,110.959V127.3A49.088,49.088,0,0,0,49.034,78.269V29.235H0Z" transform="translate(0 0)" fill="#e8d9b1"/>
+    </g>
+  </g>
+</svg>

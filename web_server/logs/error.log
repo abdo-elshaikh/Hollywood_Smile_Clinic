@@ -1,0 +1,38 @@
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:06:49.565Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:18.792Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:20.568Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:35.043Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:46.105Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:48.217Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:51.021Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:07:53.223Z"}
+{"level":"error","message":"Error: User.findOne is not a function","service":"user-service","timestamp":"2024-10-04T18:08:26.715Z"}
+{"level":"error","message":"Error: secret or public key must be provided","service":"user-service","timestamp":"2024-10-05T15:26:15.552Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-05T20:47:03.213Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-05T21:17:11.123Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-11T16:06:32.232Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T14:59:30.797Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T15:04:18.075Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T15:11:41.109Z"}
+{"level":"error","message":"Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T15:13:10.826Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T15:18:04.098Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T15:18:04.329Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-19T15:18:12.963Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:47.969Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:49.396Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:51.183Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:51.915Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:52.759Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:53.442Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:54.762Z"}
+{"level":"error","message":"JWT Error: jwt malformed","service":"user-service","timestamp":"2024-10-25T19:05:55.612Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:24:50.169Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:24:50.224Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:24:50.231Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:24:50.266Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:25:51.737Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:25:51.753Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:26:23.521Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:26:23.528Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:26:55.804Z"}
+{"level":"error","message":"JWT Error: jwt expired","service":"user-service","timestamp":"2024-10-30T20:26:55.813Z"}

@@ -10,8 +10,31 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
+    "@mui/icons-material": "^6.1.1",
+    "@mui/material": "^6.1.1",
+    "@mui/x-data-grid": "^7.22.0",
+    "axios": "^1.7.7",
+    "chart.js": "^4.4.4",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^11.8.0",
+    "i18next": "^23.16.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "ra-data-json-server": "^5.2.1",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-admin": "^5.2.1",
+    "react-before-after-slider": "^1.0.4",
+    "react-chartjs-2": "^5.2.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^15.1.0",
+    "react-router-dom": "^6.26.2",
+    "react-slick": "^0.30.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
