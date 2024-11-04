@@ -139,7 +139,7 @@ const FileExplorerDialog = ({ open, onClose, onSelectFile }) => {
     );
 
     return (
-        <Dialog open={open} onClose={onClose} fullWidth maxWidth="lg" >
+        <Dialog open={open} onClose={onClose} fullWidth maxWidth="md" >
             <DialogTitle>File Explorer</DialogTitle>
             <DialogContent>
                 <Box display="flex" justifyContent="space-between" mb={2}>

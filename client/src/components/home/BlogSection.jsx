@@ -27,19 +27,18 @@ import axiosInstance from "../../services/axiosInstance";
 const BlogSection = () => {
   const { mode } = useCustomTheme();
   const { t, i18n } = useTranslation();
-  const isRTL = i18n.dir() === "rtl";
   const [blogs, setBlogs] = React.useState([]);
-  const showSnackbar = useSnackbar();
 
   // Fetch blogs from the server
   const fetchBlogs = async () => {
     try {
       const res = await axiosInstance.get("/blogs");
-      const latestBlogs = res.data.slice(0, 3);
+
+      const latestBlogs = res.data.filter((blog) => blog.published).sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
       console.log(latestBlogs);
       setBlogs(latestBlogs);
     } catch (error) {
-      showSnackbar('failed to fetch blogs', 'error');
+      console.error("Error fetching blogs:", error);
     }
   };
 

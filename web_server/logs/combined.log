@@ -6074,3 +6074,543 @@
 {"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-02T18:19:37.655Z"}
 {"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-02T18:19:37.735Z"}
 {"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-02T18:19:37.775Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T11:30:16.491Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T11:30:17.047Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T11:30:17.378Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T14:39:10.598Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T14:39:10.855Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T14:39:10.957Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T14:42:06.113Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T14:42:06.190Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T14:42:06.273Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:17:25.617Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:17:25.937Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:17:26.033Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:18:46.960Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:18:47.009Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:18:47.066Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:19:46.349Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:19:46.454Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:19:46.484Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:31:17.976Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:31:18.033Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:31:18.081Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:31:24.190Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:31:24.369Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:31:24.452Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:31:27.133Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:31:27.186Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:31:27.215Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:31:32.527Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:31:32.598Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:31:32.659Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:31:44.699Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:31:44.757Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:31:44.809Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:31:57.767Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:31:57.885Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:31:57.966Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:32:11.207Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:32:11.271Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:32:11.355Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:32:30.518Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:32:30.580Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:32:30.612Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:33:26.667Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:33:26.761Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:33:26.809Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:33:43.575Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:33:43.706Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:33:43.742Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:34:15.210Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:34:15.289Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:34:15.331Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:37:36.058Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:37:36.127Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:37:36.174Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:37:40.971Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:37:41.015Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:37:41.050Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:43:38.727Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:43:38.813Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:43:38.845Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:44:12.733Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:44:12.815Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:44:12.865Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:44:15.310Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:44:15.375Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:44:15.422Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:44:18.281Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:44:18.439Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:44:18.531Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:44:21.775Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:44:21.858Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:44:21.898Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:44:51.991Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:44:52.224Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:44:52.446Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T15:44:55.448Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T15:44:55.509Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T15:44:55.560Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:17:27.667Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:17:27.717Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:17:27.777Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:17:43.284Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:17:43.345Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:17:43.368Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:17:54.673Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:17:54.766Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:17:54.837Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:17:57.710Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:17:57.746Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:17:57.775Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:01.727Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:01.763Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:01.791Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:11.523Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:11.583Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:11.609Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:18.331Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:18.364Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:18.400Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:25.549Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:25.586Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:25.610Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:36.902Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:36.982Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:37.022Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:44.115Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:44.224Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:44.260Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:18:48.919Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:18:48.998Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:18:49.058Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:19:16.600Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:19:16.654Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:19:16.685Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:20:53.286Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:20:53.320Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:20:53.344Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:03.513Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:03.589Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:03.632Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:07.907Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:07.965Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:07.988Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:17.881Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:17.934Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:17.968Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:23.897Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:23.972Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:24.026Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:26.532Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:26.571Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:26.597Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:32.405Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:32.476Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:32.524Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:35.975Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:36.019Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:36.052Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:45.162Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:45.218Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:45.244Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:21:57.934Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:21:57.984Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:21:58.024Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:22:10.753Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:22:10.831Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:22:10.863Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:22:18.715Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:22:18.771Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:22:18.808Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:24:11.007Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:24:11.067Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:24:11.101Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:24:47.346Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:24:47.409Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:24:47.447Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:24:54.391Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:24:54.434Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:24:54.466Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:25:19.972Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:25:20.021Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:25:20.045Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:25:59.805Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:25:59.877Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:25:59.922Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:26:02.356Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:26:02.410Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:26:02.434Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:26:27.743Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:26:27.790Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:26:27.822Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:26:33.198Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:26:33.263Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:26:33.293Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:26:38.798Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:26:38.854Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:26:38.877Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:26:44.748Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:26:44.800Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:26:44.841Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:27:16.196Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:27:16.249Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:27:16.272Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:27:21.769Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:27:21.808Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:27:21.844Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:27:44.675Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:27:44.784Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:27:44.836Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:27:46.290Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:27:46.326Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:27:46.350Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:28:36.749Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:28:36.783Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:28:36.809Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:29:30.612Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:29:30.671Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:29:30.703Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:29:52.490Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:29:52.532Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:29:52.563Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:30:44.612Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:30:44.663Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:30:44.689Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:30:48.065Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:30:48.113Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:30:48.153Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:30:52.448Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:30:52.483Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:30:52.506Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:31:02.546Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:31:02.594Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:31:02.624Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:31:04.801Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:31:04.858Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:31:04.886Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:31:47.952Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:31:48.001Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:31:48.029Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:13.944Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:14.014Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:14.054Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:20.522Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:20.686Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:20.859Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:24.190Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:24.272Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:24.329Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:29.512Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:29.578Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:29.610Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:33.321Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:33.391Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:33.417Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:46.466Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:46.518Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:46.541Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:32:52.638Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:32:52.686Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:32:52.711Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:00.030Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:00.076Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:00.109Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:04.783Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:04.890Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:04.933Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:08.618Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:08.678Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:08.709Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:18.732Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:18.768Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:18.795Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:30.411Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:30.470Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:30.492Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:35.739Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:35.828Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:35.915Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:38.772Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:38.816Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:38.845Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:33:43.361Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:33:43.414Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:33:43.449Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:34:19.315Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:34:19.417Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:34:19.496Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:34:21.955Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:34:21.990Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:34:22.018Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:34:27.167Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:34:27.269Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:34:27.303Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:35:00.001Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:35:00.051Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:35:00.112Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:49:03.441Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:49:03.534Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:49:03.608Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:49:07.645Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:49:07.713Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:49:07.743Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T16:49:28.429Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T16:49:28.503Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T16:49:28.537Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:14:01.720Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:14:01.805Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:14:01.828Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:17:59.902Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:17:59.984Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:18:00.028Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:18:05.855Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:18:05.904Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:18:05.936Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:18:47.718Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:18:47.796Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:18:47.841Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:18:59.069Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:18:59.121Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:18:59.158Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:19:08.308Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:19:08.410Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:19:08.451Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:20:35.399Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:20:35.449Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:20:35.478Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:20:39.360Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:20:39.412Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:20:39.462Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:20:44.549Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:20:44.598Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:20:44.664Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:20:46.851Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:20:46.919Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:20:46.952Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:20:57.119Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:20:57.228Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:20:57.292Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:21:01.249Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:21:01.307Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:21:01.344Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:21:05.772Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:21:05.821Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:21:05.853Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:21:07.988Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:21:08.031Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:21:08.056Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:21:51.219Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:21:51.295Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:21:51.330Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:24:05.681Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:24:05.743Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:24:05.771Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:25:48.571Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:25:48.669Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:25:48.715Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:25:52.829Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:25:52.908Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:25:52.947Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:26:00.674Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:26:00.725Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:26:00.757Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:26:19.630Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:26:19.694Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:26:19.720Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:26:31.378Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:26:31.420Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:26:31.468Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:26:34.722Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:26:34.789Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:26:34.831Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T19:26:36.806Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T19:26:36.887Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T19:26:36.934Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:18:35.560Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:18:36.037Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:18:36.123Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:26:47.797Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:26:47.865Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:26:47.913Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:26:57.870Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:26:57.937Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:26:57.990Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:39:39.265Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:39:39.317Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:39:39.352Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:30.651Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:30.742Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:30.859Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:33.616Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:33.658Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:33.689Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:37.611Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:37.659Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:37.688Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:49.097Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:49.211Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:49.246Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:54.342Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:54.396Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:54.434Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:56.536Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:56.608Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:56.651Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:40:58.901Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:40:58.953Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:40:58.991Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:41:04.396Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:41:04.460Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:41:04.503Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:41:19.514Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:41:19.550Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:41:19.601Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:41:28.138Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:41:28.199Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:41:28.231Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:41:32.418Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:41:32.514Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:41:32.591Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:41:37.505Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:41:37.572Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:41:37.611Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:41:42.308Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:41:42.371Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:41:42.404Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:44:14.874Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:44:14.948Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:44:14.995Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:47:41.397Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:47:41.468Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:47:41.515Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:49:49.324Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:49:49.411Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:49:49.449Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:53:55.136Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:53:55.185Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:53:55.216Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:53:59.703Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:53:59.885Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:53:59.997Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:54:02.821Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:54:02.905Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:54:02.936Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:54:35.850Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:54:35.919Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:54:35.945Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:54:47.668Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:54:47.741Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:54:47.804Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:54:51.279Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:54:51.322Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:54:51.358Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:54:56.038Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:54:57.948Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:54:58.001Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:54:58.045Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:06.767Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:06.815Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:55:06.848Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:18.030Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:18.092Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:55:18.129Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:20.558Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:20.605Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:55:20.639Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:51.659Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:51.720Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:55:51.767Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:54.238Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:54.348Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:55:54.405Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:56.749Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:56.877Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:55:59.145Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:55:59.229Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:55:59.271Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T20:56:05.146Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T20:56:05.213Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T20:56:05.253Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:20:25.658Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:20:25.707Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:20:25.744Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:20:50.970Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:20:51.042Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:20:51.090Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:21:05.735Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:21:05.785Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:21:05.818Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:21:12.402Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:21:12.446Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:21:12.490Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:21:15.488Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:21:15.566Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:21:15.602Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:21:33.957Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:21:34.027Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:21:34.065Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:21:39.668Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:21:39.750Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:21:39.797Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:21:54.219Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:21:54.287Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:21:54.330Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:22:36.023Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:22:36.112Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:22:36.150Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:22:55.054Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:22:55.098Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:22:55.131Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:11.865Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:11.964Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:12.007Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:17.605Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:17.671Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:17.704Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:21.757Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:21.804Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:21.840Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:25.100Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:25.139Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:25.169Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:33.470Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:33.518Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:33.559Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:46.237Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:46.298Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:46.334Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:23:55.065Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:23:55.121Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:23:55.155Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:27:31.479Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:27:31.535Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:27:31.569Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:27:40.263Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:27:40.331Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:27:40.373Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T21:27:52.484Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T21:27:52.587Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T21:27:52.635Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T23:03:26.601Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T23:03:26.755Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T23:03:26.776Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T23:04:37.827Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T23:04:37.862Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T23:04:37.885Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T23:04:43.500Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T23:04:43.535Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T23:04:43.558Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T23:04:50.655Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T23:04:50.692Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T23:04:50.716Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T23:04:54.946Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T23:04:55.039Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T23:04:55.078Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-03T23:05:12.815Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-03T23:05:12.855Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-03T23:05:12.878Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-04T15:47:36.548Z"}
+{"level":"info","message":"MongoDB connected: localhost","service":"user-service","timestamp":"2024-11-04T15:47:36.773Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-04T15:47:36.881Z"}

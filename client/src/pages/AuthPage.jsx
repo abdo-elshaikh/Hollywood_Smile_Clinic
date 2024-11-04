@@ -1,4 +1,5 @@
 import React from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import {
     Box,
     Typography,
@@ -7,6 +8,7 @@ import {
 } from "@mui/material";
 import { motion } from "framer-motion";
 import Login from "../components/auth/Login";
+import Register from "../components/auth/Register";
 import ThemeToggleButton from "../components/ThemeToggleButton";
 import { useCustomTheme } from "../contexts/ThemeProvider";
 import { useTranslation } from 'react-i18next';
@@ -120,7 +122,10 @@ const AuthPage = () => {
                                 }}
                             />
 
-                            <Login />
+                            <Routes>
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/register" element={<Register />} />
+                            </Routes>
                         </Box>
                     </Grid>
                 </Grid>

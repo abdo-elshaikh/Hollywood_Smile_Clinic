@@ -33,8 +33,8 @@ const MessagePopupMenu = () => {
     const fetchMessages = async () => {
         try {
             const response = await axiosInstance.get('/messages');
-            const unreadMessages = response.data.filter((message) => !message.read);
-            setMessages(response.data);
+            const unreadMessages = response.data.filter((message) => !message.read).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            setMessages(unreadMessages);
             setUnreadCount(unreadMessages.length);
         } catch (error) {
             console.error('Failed to fetch messages:', error);

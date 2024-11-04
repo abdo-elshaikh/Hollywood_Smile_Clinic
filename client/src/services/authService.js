@@ -17,6 +17,10 @@ const loginUser = async (userData) => {
 const registerUser = async (userData) => {
     try {
         const response = await axiosInstance.post('/auth/register', userData);
+        if (response.status === 201 && response.data.token) {
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('user', JSON.stringify(response.data.user));
+        }
         return response.data;
     } catch (error) {
         return error.response.data;

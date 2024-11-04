@@ -23,9 +23,9 @@ const CustomPagination = ({ total, page, setPage, rowsPerPage, itemName }) => {
         p: 2,
         mt: 1,
         mb: 3,
-        bgcolor: "background.paper",
+        // bgcolor: "",
         borderRadius: 1,
-        boxShadow: 2,
+        // boxShadow: 2,
         width: "100%",
       }}
     >

@@ -7,10 +7,6 @@ const CommentSchema = new mongoose.Schema(
             ref: 'Blog',
             required: true,
         },
-        name: {
-            type: String,
-            required: true,
-        },
         content: {
             type: String,
             required: true,
@@ -21,16 +17,33 @@ const CommentSchema = new mongoose.Schema(
             type: Number,
             default: 0,
         },
+        dislikes: {
+            type: Number,
+            default: 0,
+        },
+        isReply: {
+            type: Boolean,
+            default: false,
+        },
+        blocked: {
+            type: Boolean,
+            default: false,
+        },
+        date: {
+            type: Date,
+            default: Date.now,
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
+            required: true,
+        },
         replies: [
             {
                 type: mongoose.Schema.Types.ObjectId,
                 ref: 'Comment',
             },
         ],
-        approved: {
-            type: Boolean,
-            default: false,
-        },
     },
     { timestamps: true }
 );

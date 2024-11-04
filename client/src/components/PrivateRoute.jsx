@@ -3,18 +3,14 @@ import { useAuth } from "../contexts/AuthContext";
 import { Navigate } from "react-router-dom";
 
 const PrivateRoute = ({ element, requiredRoles = [] }) => {
-  let { user } = useAuth();
+  const { user } = useAuth();
 
-  // if (!user) {
-  //   user = localStorage.getItem("user") || sessionStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : null;
-  // }
-
+  // Redirect to login if user is not logged in
   if (!user) {
     return <Navigate to="/auth/login" replace />;
   }
 
-  if (user.role) console.log(user, 'user', requiredRoles, 'required roles');
-
+  // Redirect to unauthorized if user does not have required roles
   if (requiredRoles.length > 0 && !requiredRoles.includes(user.role)) {
     return <Navigate to="/unauthorized" replace />;
   }

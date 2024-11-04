@@ -1,110 +1,112 @@
-import React from 'react';
-import { Box, Card, CardContent, Typography, Button } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Box, Card, CardContent, Typography, IconButton, Grid, Container, Chip, CardMedia, Avatar, Pagination } from '@mui/material';
+import { ThumbUp, Comment, Share, ThumbDown } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import CustomPagination from '../common/CustomPagination';
-import blogImage from '../../assets/close-up-hands-wearing-protective-gloves.jpg';
+// import CustomPagination from '../common/CustomPagination';
 
-// Sample blog entries for demonstration purposes
-const blogEntries = Array.from({ length: 30 }, (_, index) => ({
-  id: index + 1,
-  date: `Sep. ${20 + index}, 2018`,
-  author: 'Admin',
-  comments: Math.floor(Math.random() * 10),
-  title: `Blog Post Title ${index + 1}`,
-  image: blogImage,
-  description:
-    'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.',
-}));
-
-const MainContent = ({ page, rowsPerPage, setPage }) => {
+const MainContent = ({ blogEntries, page, rowsPerPage, setPage, categories }) => {
   const navigate = useNavigate();
-  const blogList = blogEntries.slice((page - 1) * rowsPerPage, page * rowsPerPage);
-  const blogListLength = blogEntries.length;
+  const [blogList, setBlogList] = useState([]);
+
+  const onCategorySelect = (category) => {
+    if (category === '') {
+      setBlogList(blogEntries);
+    } else {
+      setBlogList(blogEntries.filter((blog) => blog.categories.includes(category)));
+    }
+  };
+
+  useEffect(() => {
+    setBlogList(blogEntries.slice((page - 1) * rowsPerPage, page * rowsPerPage));
+  }, [blogEntries, page, rowsPerPage]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
 
   return (
-    <Box>
-      {blogList.map((entry) => (
-        <motion.div
-          key={entry.id}
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.4 }}
-        >
-          <Card
-            elevation={3}
-            sx={{
-              width: '100%',
-              mb: 3,
-              borderRadius: 2,
-              backgroundColor: 'background.paper',
-              color: 'text.primary',
-              transition: 'transform 0.3s, box-shadow 0.3s',
-              '&:hover': {
-                transform: 'translateY(-2px)',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
-              },
-            }}
-          >
-            <CardContent sx={{ p: 2 }}>
-              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-                <Typography
-                  variant="caption"
-                  sx={{ color: 'text.secondary', display: 'flex', alignItems: 'center', gap: 1 }}
-                >
-                  <span>{entry.author}</span>
-                  <span>|</span>
-                  <span>{entry.date}</span>
-                  <span>|</span>
-                  <span>{entry.comments} Comments</span>
-                </Typography>
-              </Box>
-
-              <Typography variant="h6" sx={{ mb: 1, fontWeight: 'bold', color: 'primary.main' }}>
-                {entry.title}
-              </Typography>
-
-              <Box sx={{ mb: 1 }}>
-                <img
-                  src={entry.image}
-                  alt={entry.title}
-                  style={{
-                    width: '100%',
-                    height: '150px',
-                    objectFit: 'cover',
-                    borderRadius: '8px',
-                    boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
-                    marginBottom: '10px',
-                  }}
-                />
-              </Box>
-
-              <Typography
-                variant="body2"
-                sx={{
-                  display: '-webkit-box',
-                  overflow: 'hidden',
-                  WebkitLineClamp: 3,
-                  WebkitBoxOrient: 'vertical',
-                  lineHeight: 1.5,
-                  height: '54px',
-                }}
-              >
-                {entry.description}
-              </Typography>
-              <Button variant="outlined" onClick={() => navigate(`/blog/post/${entry.id}`)} sx={{ mt: 2 }}>
-                Read More
-              </Button>
-            </CardContent>
-          </Card>
-        </motion.div>
-      ))}
-
-      {/* Pagination component */}
-      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
-        <CustomPagination total={blogListLength} page={page} setPage={setPage} rowsPerPage={rowsPerPage} itemName="blog" />
+    <Container maxWidth="lg">
+      {/* Categories Filter */}
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', mb: 4 }}>
+        <Chip label="All" onClick={() => onCategorySelect('')} sx={{ margin: 0.5, cursor: 'pointer', '&:hover': { backgroundColor: 'primary.light' } }} />
+        {categories.map((category) => (
+          <Chip
+            key={category}
+            label={category}
+            onClick={() => onCategorySelect(category)}
+            sx={{ margin: 0.5, cursor: 'pointer', '&:hover': { backgroundColor: 'primary.light' } }}
+          />
+        ))}
       </Box>
-    </Box>
+
+      {/* Blog Entries Grid */}
+      <Grid container spacing={3}>
+        {blogList.map((blog, index) => (
+          <Grid item xs={12} sm={index % 3 === 0 ? 12 : 6} md={index % 3 === 0 ? 8 : 4} key={blog._id}>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+              <Card sx={{ cursor: 'pointer', display: 'flex', flexDirection: 'column' }} onClick={() => navigate(`/blog/post/${blog._id}`)}>
+                <CardMedia
+                  component="img"
+                  height={index % 3 === 0 ? 280 : 160}
+                  image={blog.imageUrl || 'https://via.placeholder.com/280x160?text=No+Image'}
+                  alt={blog.title}
+                  sx={{ objectFit: 'cover', borderRadius: '4px 4px 0 0' }}
+                />
+                <CardContent>
+                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                    <Avatar src={blog.author.avatarUrl} alt={blog.author.name} sx={{ width: 40, height: 40, mr: 1 }} />
+                    <Typography variant="subtitle2" color="text.secondary">
+                      {blog.author.name} | {new Date(blog.createdAt).toDateString()}
+                    </Typography>
+                  </Box>
+                  <Typography variant="h6" component="div" sx={{ fontWeight: 'bold', mb: 1 }}>
+                    {blog.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                    {blog.content.slice(0, 80)}...
+                  </Typography>
+                  <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                      <IconButton size="small">
+                        <ThumbUp />
+                      </IconButton>
+                      <Typography variant="body2" sx={{ mx: 1 }}>
+                        {blog.likes}
+                      </Typography>
+                      <IconButton size="small">
+                        <ThumbDown />
+                      </IconButton>
+                      <Typography variant="body2" sx={{ mx: 1 }}>
+                        {blog.dislikes}
+                      </Typography>
+                      <IconButton size="small">
+                        <Comment />
+                      </IconButton>
+                      <Typography variant="body2">
+                        {blog.comments.length}
+                      </Typography>
+                    </Box>
+                    <IconButton size="small">
+                      <Share />
+                    </IconButton>
+                  </Box>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* Pagination */}
+      <Box sx={{ display: 'flex', justifyContent: 'center', mt: 5 }}>
+        <Pagination count={Math.ceil(blogEntries.length / rowsPerPage)} page={page} onChange={(e, value) => setPage(value)} color="primary" />
+      </Box>
+    </Container>
   );
 };
 

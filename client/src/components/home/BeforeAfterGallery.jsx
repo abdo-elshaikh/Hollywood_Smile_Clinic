@@ -3,6 +3,8 @@ import { Box, Grid, Typography, Button } from '@mui/material';
 import { motion } from 'framer-motion';
 import BeforeAfterSlider from 'react-before-after-slider';
 import { useTranslation } from 'react-i18next';
+import SquareIcon from '@mui/icons-material/Square';
+import CircleIcon from '@mui/icons-material/Circle';
 
 const BeforeAfterImageSlider = ({ beforeImage, afterImage, t }) => (
   <Box
@@ -61,7 +63,34 @@ const BeforeAfterGallery = () => {
   };
 
   return (
-    <Box sx={{ backgroundColor: 'background.default', py: 10, px: 4 }}>
+    <Box sx={{ backgroundColor: 'background.default', py: 10, px: 4, position: 'relative', zIndex: 1 }}>
+      {/* background shapes */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3, rotate: 0 }}
+        animate={{ opacity: 1, scale: 1, rotate: 45 }}
+        transition={{ duration: 1.5 }}
+        style={{ position: 'absolute', top: 0, left: '50%', zIndex: -1 }}
+      >
+        <SquareIcon sx={{ fontSize: 500, color: '#f07167', opacity: 0.1 }} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3, rotate: 0 }}
+        animate={{ opacity: 1, scale: 1, rotate: -45 }}
+        transition={{ duration: 1.5 }}
+        style={{ position: 'absolute', bottom: 0, left: -150, zIndex: -1 }}
+      >
+        <SquareIcon sx={{ fontSize: 500, color: '#f07167', opacity: 0.1 }} />
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.3, rotate: 0 }}
+        animate={{ opacity: 1, scale: 1, rotate: -45 }}
+        transition={{ duration: 1.5 }}
+        style={{ position: 'absolute', top: 0, left: -150, zIndex: -1 }}
+      >
+        <CircleIcon sx={{ fontSize: 500, color: '#f8b26a', opacity: 0.1 }} />
+      </motion.div>
+
+      {/* title and description */}
       <Typography variant="h2" color='primary.main' align="center" gutterBottom>
         {t('BeforeAfterGallery.title')}
       </Typography>

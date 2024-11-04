@@ -87,14 +87,14 @@ const HeaderSection = () => {
                                 <Avatar
                                     src={isDark ? clinicInfo.logo.dark : clinicInfo.logo.light}
                                     alt={clinicInfo?.name.en}
-                                    sx={{ width: 60, height: 60, objectFit: 'contain', margin: isArabic ? '0 0 0 1rem' : '0 1rem 0 0' }}
+                                    sx={{ width: 60, height: 60, objectFit: 'contain' }}
                                 />
                             )}
                             <Box sx={{ ml: 1 }}>
                                 <Typography variant="subtitle1" sx={{ fontWeight: 600, fontFamily: 'Segoe UI' }}>
                                     {isArabic ? clinicInfo.name.ar : clinicInfo.name.en}
                                 </Typography>
-                                <Typography variant="body2" sx={{ fontWeight: 500, fontFamily: 'Poppins', color: 'subtitle' }}>
+                                <Typography variant="body2" sx={{ fontWeight: 500, fontFamily: 'Poppins', color: 'subtitle.main' }}>
                                     {isArabic ? clinicInfo.subtitle.ar : clinicInfo.subtitle.en}
                                 </Typography>
                             </Box>
@@ -109,11 +109,10 @@ const HeaderSection = () => {
                                         underline="none"
                                         sx={{
                                             fontSize: 20,
-                                            fontFamily: 'Poppins Regular',
+                                            fontFamily: 'Poppins',
                                             fontWeight: 'bold',
-                                            position: 'relative',
-                                            textShadow: isDark ? '0 0 2px rgba(255, 255, 255, 0.5)' : '0 0 2px rgba(0, 0, 0, 0.5)',
                                             color: isDark ? '#fff' : '#000',
+                                            position: 'relative',
                                             '&:after': {
                                                 content: '""',
                                                 position: 'absolute',
@@ -134,13 +133,12 @@ const HeaderSection = () => {
                                     >
                                         {item.label}
                                     </Link>
-
                                 </motion.div>
                             ))}
                             {/* Language and Theme Toggle Buttons */}
                             <Tooltip title={isArabic ? 'ترجم إلى الإنجليزية' : 'Translate to Arabic'}>
                                 <IconButton onClick={() => handleLanguageChange(isArabic ? 'en' : 'ar')}>
-                                    <img src={isArabic ? EnglishIcon : ArabicIcon} alt={isArabic ? 'en' : 'ar'} style={{ width: 20, height: 20 }} />
+                                    <img src={isArabic ? EnglishIcon : ArabicIcon} alt={isArabic ? 'en' : 'ar'} style={{ width: 24, height: 24 }} />
                                 </IconButton>
                             </Tooltip>
                             <Tooltip title={isDark ? (isArabic ? 'الوضع النهاري' : 'Light Mode') : (isArabic ? 'الوضع الليلى' : 'Dark Mode')}>
@@ -148,17 +146,16 @@ const HeaderSection = () => {
                                     {isDark ? <LightModeOutlined /> : <DarkModeOutlined />}
                                 </IconButton>
                             </Tooltip>
-                            {/* button to log in or Log out */}
+                            {/* Login/Logout Button */}
                             {user ? (
                                 <Button variant="contained" color="error" onClick={logout}>
                                     {t('app.logout')}
                                 </Button>
                             ) : (
-                                <Button variant="contained" color="primary" onClick={() => navigate('/login')}>
+                                <Button variant="contained" color="primary" onClick={() => navigate('/auth/login')}>
                                     {t('auth.login')}
                                 </Button>
                             )}
-
                         </Box>
 
                         {/* Mobile Menu Icon */}
@@ -180,25 +177,6 @@ const HeaderSection = () => {
                         bgcolor: isDark ? 'background.default' : 'background.paper',
                         color: isDark ? 'text.primary' : 'text.secondary',
                         width: 250,
-                        transition: 'transform 0.3s ease-in-out',
-                        transform: mobileMenuOpen ? 'translateX(0)' : 'translateX(100%)',
-                        '&::-webkit-scrollbar': {
-                            width: 8,
-                            backgroundColor: isDark ? 'rgba(0, 0, 0, 0.1)' : 'rgba(255, 255, 255, 0.1)',
-                        },
-                        '&::-webkit-scrollbar-thumb': {
-                            borderRadius: 4,
-                            backgroundColor: isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)',
-                        },
-                        '&:hover::-webkit-scrollbar-thumb': {
-                            backgroundColor: isDark ? 'rgba(0, 0, 0, 0.7)' : 'rgba(255, 255, 255, 0.7)',
-                        },
-                        '&:hover::-webkit-scrollbar-thumb:hover': {
-                            backgroundColor: isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)',
-                        },
-                        '&:hover::-webkit-scrollbar-thumb:active': {
-                            backgroundColor: isDark ? 'rgba(0, 0, 0, 0.9)' : 'rgba(255, 255, 255, 0.9)',
-                        },
                     },
                 }}
             >
@@ -214,7 +192,6 @@ const HeaderSection = () => {
                                             sx={{
                                                 textDecoration: 'none',
                                                 color: isDark ? 'text.primary' : 'text.secondary',
-                                                alignItems: isArabic ? 'right' : 'left',
                                             }}
                                         >
                                             {item.label}
@@ -234,7 +211,7 @@ const HeaderSection = () => {
                                 <ListItemText primary={t('app.logout')} />
                             </ListItem>
                         ) : (
-                            <ListItem button onClick={() => navigate('/login')}>
+                            <ListItem button onClick={() => navigate('/auth/login')}>
                                 <ListItemText primary={t('auth.login')} />
                             </ListItem>
                         )}

@@ -58,6 +58,10 @@ const MainContentPage = () => {
         navigate(`/blog-dashboard/edit-blog/${id}`);
     };
 
+    const handleViewBlog = (id) => {
+        navigate(`/blog-dashboard/view-blog/${id}`);
+    };
+
     const handleDeleteBlog = (id) => {
         if (window.confirm('Are you sure you want to delete this blog post?')) {
             axiosInstance.delete(`/blogs/${id}`)
@@ -116,7 +120,7 @@ const MainContentPage = () => {
             {/* Blogs Section */}
             <Box display="flex" justifyContent="space-between" alignItems="center" mb={3}>
                 <Typography variant="h4">Recent Blog Posts</Typography>
-                <Button variant="contained" color="primary" startIcon={<AddCircleOutline />} href="/blog-dashboard/add-blog">
+                <Button variant="contained" color="primary" startIcon={<AddCircleOutline />} onClick={() => navigate('/blog-dashboard/add-blog')}>
                     Add New Blog
                 </Button>
             </Box>
@@ -124,7 +128,14 @@ const MainContentPage = () => {
             <Grid container spacing={3} component={motion.div} layout>
                 {paginatedBlogs.map((blog) => (
                     <Grid item xs={12} sm={6} md={4} key={blog._id} component={motion.div} layout>
-                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', boxShadow: 2 }}>
+                        <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column', boxShadow: 2, position: 'relative' }}>
+                            <Badge
+                                overlap="circular"
+                                anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                                badgeContent={blog.published ? 'Published' : 'Draft'}
+                                color={blog.published ? 'success' : 'error'}
+                                sx={{ position: 'absolute', top: 20, right: 35 }}
+                            />
                             <CardMedia component="img" height="180" image={blog.imageUrl} alt={blog.title} sx={{ borderRadius: 1 }} />
                             <CardContent>
                                 <Typography variant="h6">{blog.title}</Typography>
@@ -132,7 +143,7 @@ const MainContentPage = () => {
                                 <Typography variant="body2" color="textSecondary" sx={{ mt: 1 }}>{blog.content.substring(0, 100)}...</Typography>
                             </CardContent>
                             <CardActions sx={{ mt: 'auto', justifyContent: 'space-between' }}>
-                                <Button size="small" color="primary" onClick={() => handleEditBlog(blog._id)}>View Details</Button>
+                                <Button size="small" color="primary" onClick={() => handleViewBlog(blog._id)}>View Details</Button>
                                 <Box>
                                     <Tooltip title="Edit">
                                         <IconButton color="primary" onClick={() => handleEditBlog(blog._id)}><Edit /></IconButton>

@@ -38,7 +38,7 @@ const App = () => {
         <Route path="/dashboard/*" element={<PrivateRoute element={<DashboardPage />} requiredRoles={['admin']} />} />
         <Route path="/blog-dashboard/*" element={<PrivateRoute element={<BlogDashboard />} requiredRoles={['admin', 'editor', 'author']} />} />
         <Route path="/about-us" element={<AboutUsPage />} />
-        <Route path="/login" element={<AuthPage />} />
+        <Route path="/auth/*" element={<AuthPage />} />
         <Route path="/blog/*" element={<BlogPage />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/faq" element={<FaqPage />} />

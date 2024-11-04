@@ -58,6 +58,7 @@ const SnackbarProvider = ({ children }) => {
                                 aria-label="close"
                                 color="inherit"
                                 onClick={handleClose}
+                                sx={{ mr: 2 }}
                             >
                                 <Close />
                             </IconButton>

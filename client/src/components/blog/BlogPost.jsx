@@ -1,125 +1,339 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Box, Grid, Typography, Paper, TextField, Button, Avatar, Link } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import {
+  Box, Typography, Paper, TextField, Button, Avatar, IconButton, Divider, List,
+  ListItem, ListItemAvatar, ListItemText, Tooltip, Collapse
+} from '@mui/material';
+import { ThumbUp, Share, Send, Delete, Comment, Reply, Edit, ThumbDown, ExpandMore, ExpandLess } from '@mui/icons-material';
+import blogService from '../../services/blogService';
+import commentService from '../../services/commentService';
+import notificationService from '../../services/notificationService';
+import { useAuth } from '../../contexts/AuthContext';
+import { useSnackbar } from '../../contexts/SnackbarProvider';
+import BlogShareDialog from '../common/BlogShareDialog';
+
 
 const BlogPost = () => {
   const { id } = useParams();
+  const { user } = useAuth();
+  const navigate = useNavigate();
+  const showSnackbar = useSnackbar();
+
+  const [blog, setBlog] = useState(null);
+  const [likeCount, setLikeCount] = useState(0);
+  const [isLiked, setIsLiked] = useState(false);
+  const [disLiked, setDisLiked] = useState(0);
+  const [isDisLiked, setIsDisiked] = useState(false);
+  const [comments, setComments] = useState([]);
+  const [commentText, setCommentText] = useState('');
+  const [replies, setReplies] = useState({});
+  const [showReplies, setShowReplies] = useState({});
+  const [editReply, setEditReply] = useState(null);
+
+  useEffect(() => {
+    fetchData();
+    addBlogView();
+  }, [id]);
+
+  const addBlogView = async () => {
+    try {
+      await blogService.addView(id);
+    } catch (error) {
+      console.error('Failed to add view:', error);
+    }
+  };
+
+  const ShareBlog = async () => {
+    try {
+      await blogService.addShare(id);
+    } catch (error) {
+      console.error('Failed to share blog:', error);
+    }
+  };
+
+  const createNotification = async (title, message, type, ref, refId) => {
+    try {
+      await notificationService.createNotification({ title, message, type, ref, refId });
+    } catch (error) {
+      console.error('Failed to create notification:', error);
+    }
+  };
+
+  const fetchData = async () => {
+    try {
+      const blogData = await blogService.getBlog(id);
+      setBlog(blogData);
+      setLikeCount(blogData.likes || 0);
+      setDisLiked(blogData.dislikes || 0);
+
+      const commentsData = await commentService.getCommentsByBlog(id);
+      setComments(commentsData);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  const handleLike = async () => {
+    if (!user) {
+      showSnackbar('Please login to like this blog', 'info');
+      return;
+    }
+    try {
+      await blogService.likeBlog(id);
+      setLikeCount((prev) => prev + 1);
+      setIsLiked(true);
+      createNotification('Liked', `${user.name} liked your blog post`, 'info', 'blogs', id);
+    } catch (error) {
+      console.error('Error liking blog:', error);
+    }
+  };
+
+  const handleDislike = async () => {
+    if (!user) {
+      showSnackbar('Please login to dislike this blog', 'info');
+      return;
+    }
+    try {
+      await blogService.dislikeBlog(id);
+      setDisLiked((prev) => prev + 1);
+      setIsDisLiked(true);
+      createNotification('Disliked', `${user.name} disliked your blog post`, 'info', 'blogs', id);
+    } catch (error) {
+      console.error('Error disliking blog:', error);
+    }
+  };
+
+  const handleCommentSubmit = async () => {
+    if (!user) {
+      showSnackbar('Please login to comment', 'info');
+      setCommentText('');
+      return;
+    }
+    if (!commentText.trim()) {
+      setCommentText('');
+      return;
+    }
+
+    try {
+      await blogService.addComment(id, { content: commentText, user: user._id, blog: id });
+      setCommentText('');
+      fetchData();
+      createNotification('Commented', `${user.name} commented on your blog post`, 'info', 'blogs', id);
+    } catch (error) {
+      showSnackbar('Error adding comment', 'error');
+    }
+  };
+
+  const handleReplySubmit = async (commentId) => {
+    if (!user) {
+      showSnackbar('Please login to reply', 'info');
+      setReplies((prev) => ({ ...prev, [commentId]: '' }));
+      return;
+    }
+    const content = replies[commentId];
+    if (!content.trim()) return;
+    try {
+      await commentService.addReply(commentId, { content, user: user._id, blog: id });
+      setReplies((prev) => ({ ...prev, [commentId]: '' }));
+      await fetchData();
+      createNotification('Replied', `${user.name} replied to your comment`, 'info', 'blogs', id);
+    } catch (error) {
+      showSnackbar('Error adding reply', 'error');
+    }
+  };
+
+  const handleCommentDelete = async (commentId) => {
+    if (!user) {
+      showSnackbar('Please login to delete comment', 'info');
+      return;
+    }
+    try {
+      await commentService.deleteComment(commentId);
+      setComments((prev) => prev.filter((comment) => comment._id !== commentId));
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+    }
+  };
+
+  const handleReplyDelete = async (commentId, replyId) => {
+    if (!user) {
+      showSnackbar('Please login to delete reply', 'info');
+      return;
+    }
+    try {
+      await commentService.deleteReply(commentId, replyId);
+      setComments((prev) =>
+        prev.map((comment) =>
+          comment._id === commentId
+            ? { ...comment, replies: comment.replies.filter((reply) => reply._id !== replyId) }
+            : comment
+        )
+      );
+      setReplies((prev) => ({ ...prev, [commentId]: '' }));
+      createNotification('Deleted', `${user.name} deleted your reply`, 'info', 'blogs', id);
+    } catch (error) {
+      console.error('Error deleting reply:', error);
+    }
+  };
+
+  const tocomment = () => {
+    const comment = document.getElementById('comment-input');
+    comment.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    comment.focus();
+  };
+
+  const toggleReplies = (commentId) => {
+    setShowReplies((prev) => ({ ...prev, [commentId]: !prev[commentId] }));
+  };
+
+  if (!blog) return <Typography>Loading...</Typography>;
 
   return (
-    <Box sx={{ padding: 4 }}>
-      <Grid container spacing={4}>
-        {/* Main Content Area */}
-        <Grid item md={12}>
-          <Box>
-            <Typography variant="h4" gutterBottom>
-              #1. We Love WordPress Themes
-            </Typography>
-            <Typography paragraph>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio...
-            </Typography>
-            <Box mb={2}>
-              <img src="images/image_4.jpg" alt="" style={{ width: '100%', borderRadius: 8 }} />
-            </Box>
-            <Typography paragraph>
-              Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni...
-            </Typography>
-            <Typography variant="h4" gutterBottom>
-              #2. Creative WordPress Themes
-            </Typography>
-            <Typography paragraph>
-              Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores...
-            </Typography>
-            <Box mb={2}>
-              <img src="images/image_5.jpg" alt="" style={{ width: '100%', borderRadius: 8 }} />
-            </Box>
-            <Typography paragraph>
-              Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum...
-            </Typography>
+    <Box sx={{ px: 6 }}>
+      {/* Blog Header  */}
+      <Paper sx={{ p: 4, mb: 4 }}>
+        <Typography variant="h4" sx={{ mb: 2, fontWeight: 'bold', color: 'primary.main' }} gutterBottom>{blog.title}</Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, my: 2 }}>
+          <Avatar src={blog.author?.avatarUrl} />
+          <Typography variant="subtitle1">By {blog.author?.name}</Typography>
+          <Typography variant="subtitle1">| {`${new Date(blog.date).toLocaleDateString()} ${new Date(blog.date).toLocaleTimeString()}`}</Typography>
+        </Box>
+        {/* blog image */}
+        <Box sx={{ mb: 2 }}>
+          <img src={blog.imageUrl} alt={blog.title} style={{ width: '100%', height: 'auto' }} />
+        </Box>
+        {/* blog content */}
+        <Box sx={{ my: 3 }}>
+          <Typography variant="body1">{blog.content}</Typography>
+        </Box>
+        <Box sx={{ display: 'flex', gap: 2 }}>
+          <Tooltip title="Like">
+            <IconButton disabled={!user} onClick={handleLike} color={isLiked ? 'primary' : 'default'}>
+              <ThumbUp />
+              <Typography variant="body2" sx={{ ml: 1 }}>{likeCount}</Typography>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Dislike">
+            <IconButton disabled={!user} onClick={handleDislike} color={isDisLiked ? 'primary' : 'default'}>
+              <ThumbDown />
+              <Typography variant="body2" sx={{ ml: 1 }}>{disLiked}</Typography>
+            </IconButton>
+          </Tooltip>
+          <Tooltip onClick={tocomment} title="Comments">
+            <IconButton color="primary">
+              <Comment />
+              <Typography variant="body2" sx={{ ml: 1 }}>{comments.length}</Typography>
+            </IconButton>
+          </Tooltip>
+          <BlogShareDialog blog={blog} />
+          <Typography variant="body2" sx={{ ml: 1 }}>{blog.shares.length}</Typography>
+        </Box>
+      </Paper>
 
-            {/* Tags */}
-            <Box mt={4} mb={4}>
-              <Typography variant="subtitle1">Tags:</Typography>
-              <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-                {['Life', 'Sport', 'Tech', 'Travel'].map((tag, index) => (
-                  <Paper key={index} elevation={1} sx={{ padding: '4px 12px', borderRadius: 16 }}>
-                    <Typography variant="caption">{tag}</Typography>
-                  </Paper>
-                ))}
-              </Box>
-            </Box>
+      <Box sx={{ mb: 2 }}>
+        <TextField
+          id='comment-input'
+          size="small"
+          fullWidth
+          disabled={!user}
+          variant="outlined"
+          placeholder="Add a comment..."
+          value={commentText}
+          onChange={(e) => setCommentText(e.target.value)}
+          multiline
+          rows={2}
+        />
+        <Button
+          variant="text"
+          color="primary"
+          size="small"
+          onClick={handleCommentSubmit}
+          endIcon={<Send />}
+          sx={{ mt: 1 }}
+        >
+          Send
+        </Button>
+      </Box>
 
-            {/* Author Bio */}
-            <Paper sx={{ padding: 4, display: 'flex', alignItems: 'center', gap: 4, marginTop: 4 }}>
-              <Avatar alt="Michael Buff" src="images/person_1.jpg" sx={{ width: 100, height: 100 }} />
-              <Box>
-                <Typography variant="h6">Michael Buff</Typography>
-                <Typography variant="body2">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus itaque, autem necessitatibus voluptate quod mollitia...
-                </Typography>
-              </Box>
-            </Paper>
-          </Box>
-        </Grid>
-
-        {/* Sidebar Area */}
-
-      </Grid>
-    </Box>
-  );
-};
-
-const SidebarArea = () => {
-  return (
-    <Box>
-      <Grid item md={4}>
-        <Paper sx={{ padding: 2, marginBottom: 4 }}>
-          <TextField fullWidth placeholder="Type a keyword and hit enter" variant="outlined" size="small" />
-        </Paper>
-
-        <Paper sx={{ padding: 2, marginBottom: 4 }}>
-          <Typography variant="h6">Categories</Typography>
-          {['Food', 'Dish', 'Desserts', 'Drinks', 'Ocassion'].map((category, index) => (
-            <Box key={index} sx={{ display: 'flex', justifyContent: 'space-between', paddingY: 1 }}>
-              <Link href="#" underline="hover">
-                {category}
-              </Link>
-              <Typography variant="caption">({12 + index * 10})</Typography>
-            </Box>
-          ))}
-        </Paper>
-
-        {/* Recent Blogs */}
-        <Paper sx={{ padding: 2, marginBottom: 4 }}>
-          <Typography variant="h6">Recent Blog</Typography>
-          {[1, 2, 3].map((_, index) => (
-            <Box key={index} sx={{ display: 'flex', marginBottom: 2 }}>
-              <Box
-                component="img"
-                src={`images/image_${index + 1}.jpg`}
-                sx={{ width: 70, height: 70, borderRadius: 2, marginRight: 2 }}
+      <Typography variant="h5" sx={{ mb: 2, fontWeight: 'bold' }}>Comments</Typography>
+      {/* Comment List */}
+      <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+        {comments.filter((comment) => !comment.isReply).map((comment) => (
+          <React.Fragment key={comment._id}>
+            <ListItem onClick={() => toggleReplies(comment._id)}>
+              <ListItemAvatar>
+                <Avatar src={comment.user.avatarUrl} />
+              </ListItemAvatar>
+              <ListItemText
+                primary={comment.content}
+                secondary={`${comment.user.name} | ${new Date(comment.date).toLocaleDateString()} - ${new Date(comment.date).toLocaleTimeString()}`}
               />
-              <Box>
-                <Typography variant="subtitle2">
-                  Even the all-powerful Pointing has no control about the blind texts
-                </Typography>
-                <Typography variant="caption">July 12, 2018 • Admin</Typography>
+              {/* Actions */}
+              {comment.replies.length > 0 && (
+                <IconButton onClick={() => toggleReplies(comment._id)}>
+                  {showReplies[comment._id] ? <ExpandLess /> : <ExpandMore />}
+                </IconButton>
+              )}
+              {user && comment.user._id === user._id && (
+                <IconButton onClick={() => setEditComment(comment._id)}>
+                  <Edit color="primary" />
+                </IconButton>
+              )}
+              {user && comment.user._id === user._id && (
+                <IconButton onClick={() => handleCommentDelete(comment._id)} color="error">
+                  <Delete />
+                </IconButton>
+              )}
+            </ListItem>
+            <Collapse in={showReplies[comment._id]} timeout={300} unmountOnExit>
+              <Box sx={{ ml: 4 }}>
+                {comment.replies.map((reply) => (
+                  <ListItem key={reply._id}>
+                    <ListItemAvatar>
+                      <Avatar src={comments.find((c) => c._id === reply._id).user?.avatarUrl} />
+                    </ListItemAvatar>
+                    <ListItemText
+                      primary={reply.content}
+                      secondary={`${comments.find((c) => c._id === reply._id).user?.name} | ${new Date(reply.date).toLocaleDateString()} - ${new Date(reply.date).toLocaleTimeString()}`}
+                      sx={{ color: 'text.secondary' }}
+                    />
+                    {user && reply.user === user._id && (
+                      <>
+                        <IconButton onClick={() => handleReplyDelete(comment._id, reply._id)}>
+                          <Delete color="error" />
+                        </IconButton>
+                        <IconButton onClick={() => setEditReply(reply._id)}>
+                          <Edit color="success" />
+                        </IconButton>
+                      </>
+                    )}
+                  </ListItem>
+                ))}
+                <TextField
+                  fullWidth
+                  variant="outlined"
+                  placeholder="Write a reply..."
+                  value={replies[comment._id] || ''}
+                  onChange={(e) => setReplies({ ...replies, [comment._id]: e.target.value })}
+                  multiline
+                  rows={1}
+                  sx={{ mt: 1 }}
+                />
+                <Button
+                  variant="text"
+                  disabled={!user}
+                  color="primary"
+                  onClick={() => handleReplySubmit(comment._id)}
+                  startIcon={<Send />}
+                >
+                  Reply
+                </Button>
               </Box>
-            </Box>
-          ))}
-        </Paper>
-
-        {/* Tag Cloud */}
-        <Paper sx={{ padding: 2, marginBottom: 4 }}>
-          <Typography variant="h6">Tag Cloud</Typography>
-          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap' }}>
-            {['dish', 'menu', 'food', 'sweet', 'tasty', 'delicious'].map((tag, index) => (
-              <Paper key={index} elevation={1} sx={{ padding: '4px 12px', borderRadius: 16 }}>
-                <Typography variant="caption">{tag}</Typography>
-              </Paper>
-            ))}
-          </Box>
-        </Paper>
-      </Grid>
+            </Collapse>
+            <Divider />
+          </React.Fragment>
+        ))}
+      </List>
     </Box>
   );
 };

@@ -75,15 +75,12 @@ const ManageFilesPage = () => {
         }
     };
 
-    const handleFileSelect = (event) => {
+    const handleFileSelect = async (event) => {
         setSelectedFile(event.target.files[0]);
     };
 
-    const handleUpload = async () => {
-        if (!selectedFile) {
-            showSnackbar("Please select a file to upload", "error");
-            return;
-        }
+    const handleUpload = async (event) => {
+        const selectedFile = event.target.files[0];
         try {
             setUploading(true);
             const response = await fileService.uploadFile(selectedFile, directoryPath);
@@ -266,11 +263,11 @@ const ManageFilesPage = () => {
                         variant="outlined"
                         startIcon={<CloudUpload />}
                         disabled={uploading}
-                        onClick={selectedFile ? handleUpload : null}
+                        onClick={() => document.getElementById("file-upload").click()}
                     >
-                        {selectedFile ? "Upload" : "Upload File"}
-                        <input type="file" hidden onChange={handleFileSelect} />
+                        Upload File
                     </Button>
+                    <input accept="*" multiple id="file-upload" type="file" hidden onChange={handleUpload} />
                     <Button onClick={handlePaste} variant="outlined" disabled={!clipboard}>
                         Paste
                     </Button>

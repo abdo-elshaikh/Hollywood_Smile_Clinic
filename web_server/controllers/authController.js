@@ -8,19 +8,22 @@ const generateToken = require('../utils/generateToken');
 // @access  Public
 const registerUser = async (req, res) => {
     const { name, email, password } = req.body;
-
+    console.log(req.body, 'req.body');
     try {
-        let user = await User.findOne({ email });
-
-        if (user) {
+        // check if email or name is already registered
+        const userExists = await User.findOne({ $or: [{ email }, { name }] });
+        if (userExists) {
             return res.status(400).json({ message: 'User already exists' });
         }
 
-        user = await User.create({ name, email, password });
+        const user = await User.create({ name, email, password });
         const token = generateToken(user._id);
+        const userData = user.toObject();
+        delete userData.password;
 
-        res.status(201).json({ token, user });
+        res.status(201).json({ token, user: userData, message: 'User registered successfully' });
     } catch (error) {
+        console.log(error, 'error');
         res.status(500).json({ message: error.message });
     }
 };
@@ -109,8 +112,7 @@ const changePassword = async (req, res) => {
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
-}
-
+};
 
 module.exports = {
     registerUser,

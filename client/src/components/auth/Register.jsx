@@ -8,8 +8,6 @@ import {
     Typography,
     Box,
     Avatar,
-    FormControlLabel,
-    Checkbox,
     InputAdornment,
 } from "@mui/material";
 import { Email, LockOutlined, Visibility, VisibilityOff, Person } from "@mui/icons-material";
@@ -18,32 +16,64 @@ import { motion } from "framer-motion";
 import { useTranslation } from 'react-i18next';
 import { useClinicContext } from "../../contexts/ClinicContext";
 
-const Login = () => {
+const Register = () => {
     const { mode: themeMode } = useCustomTheme();
     const { t, i18n } = useTranslation();
     const { clinicInfo } = useClinicContext();
     const isDarkMode = themeMode === "dark";
-    const { login, error } = useAuth();
-    const [formData, setFormData] = useState({ identifier: "", password: "" });
+    const { register, error } = useAuth();
+    const [formData, setFormData] = useState({
+        email: "",
+        username: "",
+        password: "",
+    });
     const [loading, setLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
-    const [rememberMe, setRememberMe] = useState(false);
     const showSnackbar = useSnackbar();
     const navigate = useNavigate();
-    document.title = "HSC | Login";
+    document.title = "HSC | Register";
     const isArabic = i18n.language === "ar";
 
     const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
+    const validateEmail = (email) => {
+        const re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    };
+
+    const validatePassword = (password) => {
+        return password.length >= 6;
+    };
+
+    const validateUsername = (username) => {
+        return username.length >= 3 && !username.includes(" ");
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!validateEmail(formData.email)) {
+            showSnackbar("Please enter a valid email address", "error");
+            return;
+        }
+        if (!validatePassword(formData.password)) {
+            showSnackbar("Password must be at least 6 characters", "error");
+            return;
+        }
+        if (!validateUsername(formData.username)) {
+            showSnackbar("Username must be at least 3 characters and no spaces", "error");
+            return;
+        }
         setLoading(true);
         try {
-            const user = await login(formData);
-            showSnackbar('Login successful', "success");
-            navigate(user.role === "admin" ? "/dashboard" : user.role === "editor" || user.role === "author" ? "/blog-dashboard" : "/");
+            const data = await register({ ...formData, name: formData.username });
+            if (data.user) {
+                showSnackbar(data.message, "success");
+                navigate('/auth/login');
+            } else {
+                showSnackbar(data.message, "error");
+            }
         } catch (err) {
-            showSnackbar(error || "Login failed", "error");
+            showSnackbar(error || "Registration failed", "error");
         } finally {
             setLoading(false);
         }
@@ -91,17 +121,35 @@ const Login = () => {
                     color: isDarkMode ? "#90caf9" : "#007bb5",
                 }}
             >
-                {t("auth.welcome")}
+                {t("auth.register")}
             </Typography>
 
             <form onSubmit={handleSubmit}>
                 <TextField
-                    label={`${t("auth.email")} ${t("auth.or")} ${t("auth.username")}`}
-                    name="identifier"
+                    label={t("auth.email")}
+                    name="email"
+                    type="email"
+                    fullWidth
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    InputProps={{
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <Email sx={{ color: isDarkMode ? "#90caf9" : "#007bb5" }} />
+                            </InputAdornment>
+                        ),
+                    }}
+                    sx={{ mb: 2 }}
+                />
+
+                <TextField
+                    label={t("auth.username")}
+                    name="username"
                     type="text"
                     fullWidth
                     required
-                    value={formData.identifier}
+                    value={formData.username}
                     onChange={handleChange}
                     InputProps={{
                         startAdornment: (
@@ -110,8 +158,6 @@ const Login = () => {
                             </InputAdornment>
                         ),
                     }}
-                    helperText={formData.identifier && formData.identifier.length < 3 ? t("auth.enterValid") : ""}
-                    error={formData.identifier && formData.identifier.length < 3}
                     sx={{ mb: 2 }}
                 />
 
@@ -140,18 +186,6 @@ const Login = () => {
                     sx={{ mb: 2 }}
                 />
 
-                <FormControlLabel
-                    control={
-                        <Checkbox
-                            checked={rememberMe}
-                            onChange={(e) => setRememberMe(e.target.checked)}
-                            sx={{ color: isDarkMode ? "#90caf9" : "#007bb5" }}
-                        />
-                    }
-                    label={t("auth.rememberMe")}
-                    sx={{ color: isDarkMode ? "#90caf9" : "#007bb5", display: 'flex' }}
-                />
-
                 <Button
                     type="submit"
                     variant="contained"
@@ -169,23 +203,21 @@ const Login = () => {
                     }}
                     disabled={loading}
                 >
-                    {loading ? t("common.loading") : t("auth.login")}
+                    {loading ? t("common.loading") : t("auth.register")}
                 </Button>
             </form>
 
             <Typography variant="body2" sx={{ mt: 2, color: isDarkMode ? "#e0f7fa" : "#007bb5" }}>
-                <Button variant="text" onClick={() => navigate("/auth/register")} style={{ textDecoration: "none", color: isDarkMode ? "#90caf9" : "#007bb5" }}>
-                    {isArabic ? "ليس لديك حساب؟ انقر هنا للتسجيل" : "Don't have an account? Click here to register"}
-                </Button>
-            </Typography>
-
-            <Typography variant="body2" sx={{ mt: 2, color: isDarkMode ? "#e0f7fa" : "#007bb5" }}>
-                <Button variant="text" onClick={() => navigate("/")} style={{ textDecoration: "none", color: isDarkMode ? "#90caf9" : "#007bb5" }}>
-                    {isArabic ? "الرجوع إلى الصفحة الرئيسية" : "Back to Home"}
+                <Button
+                    variant="text"
+                    sx={{ color: isDarkMode ? "#90caf9" : "#007bb5" }}
+                    onClick={() => navigate("/auth/login")}
+                >
+                    {t("auth.login")}
                 </Button>
             </Typography>
         </Box>
     );
 };
 
-export default Login;
+export default Register;

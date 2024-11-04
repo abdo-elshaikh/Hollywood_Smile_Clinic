@@ -17,6 +17,7 @@ import { Notifications, ClearAllTwoTone } from '@mui/icons-material';
 import notificationService from '../../services/notificationService';
 import NotificationDetails from './NotificationDetails';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 
 const NotificationPopupMenu = () => {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -27,14 +28,17 @@ const NotificationPopupMenu = () => {
     const navigate = useNavigate();
 
     const open = Boolean(anchorEl);
+    const { user } = useAuth();
+
 
     const fetchNotifications = async () => {
         try {
             setLoading(true);
             const data = await notificationService.getNotifications();
-            const unreadNotifications = data.filter((notification) => !notification.read).reverse();
-            setNotifications(data);
-            setUnreadCount(unreadNotifications.length);
+            const unreadNotifications = data.filter((notification) => !notification.read).sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+            const userNotifications = user.role === 'admin' ? unreadNotifications : unreadNotifications.filter((notification) => notification.ref === 'blog');
+            setNotifications(userNotifications);
+            setUnreadCount(userNotifications.length);
         } catch (error) {
             console.error('Failed to fetch notifications:', error);
         } finally {

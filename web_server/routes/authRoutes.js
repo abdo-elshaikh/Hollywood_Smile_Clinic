@@ -16,6 +16,6 @@ router.post('/login', loginUser); // POST /api/users/login
 // Protected routes (Requires authentication)
 router.get('/profile', protect, getUserProfile); // GET /api/users/profile
 router.put('/profile', protect, updateUserProfile); // PUT /api/users/profile
-router.put('/profile/password', protect, changePassword); // PUT /api/users/profile/password
+router.put('/profile/change-password', protect, changePassword); // PUT /api/users/profile/password
 
 module.exports = router;
