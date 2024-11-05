@@ -4,6 +4,7 @@
   "description": "Backend server for a web application using Express.js",
   "main": "server.js",
   "scripts": {
+    "install-server": "npm install",
     "test": "jest tests *.test.js && exit 1",
     "start": "node server.js",
     "dev": "nodemon --inspect --exec node server.js"
