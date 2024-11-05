@@ -130,7 +130,7 @@ const MainContentPage = ({ blogs = [], comments = [] }) => {
                                     <Avatar src={blog.imageUrl} sx={{ mr: 2 }} />
                                     <ListItemText
                                         primary={blog.title}
-                                        secondary={`${blog.author.name} | ${new Date(blog.date).toLocaleDateString()}`}
+                                        secondary={`${blog.author?.name} | ${new Date(blog.date).toLocaleDateString()}`}
                                     />
                                     <Box display="flex" alignItems="center">
                                         <Comment sx={{ mr: 1 }} />

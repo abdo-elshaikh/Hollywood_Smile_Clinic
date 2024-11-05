@@ -222,7 +222,6 @@ const BlogDashboard = () => {
                     }
                 }}
             >
-
                 <Drawer
                     variant="permanent"
                     anchor="right"
@@ -255,7 +254,7 @@ const BlogDashboard = () => {
                                     <Avatar src={blog.imageUrl} sx={{ mr: 2 }} />
                                     <Box>
                                         <Typography variant="subtitle1">{blog.title.substring(0, 20)}</Typography>
-                                        <Typography variant="body2" color="textSecondary">{blog.author.name}</Typography>
+                                        <Typography variant="body2" color="textSecondary">{blog.author?.name}</Typography>
                                     </Box>
                                 </Box>
                             </motion.div>

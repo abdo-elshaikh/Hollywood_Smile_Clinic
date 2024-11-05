@@ -6829,3 +6829,6 @@
 {"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-05T15:15:34.744Z"}
 {"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-11-05T15:15:36.384Z"}
 {"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-05T15:15:36.681Z"}
+{"level":"info","message":"Server running on http://localhost:5001","service":"user-service","timestamp":"2024-11-05T15:16:32.691Z"}
+{"level":"info","message":"MongoDB connected successfully","service":"user-service","timestamp":"2024-11-05T15:16:34.311Z"}
+{"level":"info","message":"Admin user already exists","service":"user-service","timestamp":"2024-11-05T15:16:34.595Z"}
